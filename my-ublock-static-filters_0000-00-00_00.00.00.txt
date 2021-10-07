@@ -1,22 +1,22 @@
-    // Last updated: 2021.10.07
-    
-    ! Twitterを使ってみよう 非表示
-    twitter.com##div[data-testid=sidebarColumn] div > div > div > section[aria-label="アカウント作成"]
+// Last updated: 2021.10.07
 
-    ! Twitter いまどうしてる？ 非表示
-    twitter.com##div[aria-label="タイムライン: トレンド"]
+! Twitterを使ってみよう 非表示
+twitter.com##div[data-testid=sidebarColumn] div > div > div > section[aria-label="アカウント作成"]
 
-    ! Twitter おすすめツイート 非表示
-    twitter.com##aside[aria-label=おすすめユーザー]:upward(1)
+! Twitter いまどうしてる？ 非表示
+twitter.com##div[aria-label="タイムライン: トレンド"]
 
-    ! YouTube 検索結果 他の人はこちらも視聴しています 非表示
-    youtube.com###title.ytd-shelf-renderer:has-text(/^他の人はこちらも視聴しています$/):upward(ytd-shelf-renderer)
+! Twitter おすすめツイート 非表示
+twitter.com##aside[aria-label=おすすめユーザー]:upward(1)
 
-    ! YouTube 検索結果 あなたへのおすすめ 非表示
-    youtube.com###title.ytd-shelf-renderer:has-text(/^あなたへのおすすめ$/):upward(ytd-shelf-renderer)
+! YouTube 検索結果 他の人はこちらも視聴しています 非表示
+youtube.com###title.ytd-shelf-renderer:has-text(/^他の人はこちらも視聴しています$/):upward(ytd-shelf-renderer)
 
-    ! YouTube アノテーションボタン削除
-    annotations_module.js$script,domain=youtube.com
+! YouTube 検索結果 あなたへのおすすめ 非表示
+youtube.com###title.ytd-shelf-renderer:has-text(/^あなたへのおすすめ$/):upward(ytd-shelf-renderer)
 
-    ! YouTube 終了画面カード非表示
-    youtube.com##.ytp-ce-element-show
+! YouTube アノテーションボタン削除
+annotations_module.js$script,domain=youtube.com
+
+! YouTube 終了画面カード非表示
+youtube.com##.ytp-ce-element-show
