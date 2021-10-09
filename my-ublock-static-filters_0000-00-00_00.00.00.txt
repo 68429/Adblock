@@ -1,4 +1,4 @@
-! Last updated: 2021.10.08
+! Last updated: 2021.10.10
 
 ! Twitterを使ってみよう 非表示
 twitter.com##div[data-testid=sidebarColumn] div > div > div > section[aria-label="アカウント作成"]
@@ -20,3 +20,29 @@ annotations_module.js$script,domain=youtube.com
 
 ! YouTube 終了画面カード非表示
 youtube.com##.ytp-ce-element-show
+
+!
+! スマホ用アメブロを見やすくする
+ameblo.jp##div[class^="_"]:has(> div > h2:has-text(/さんの人気記事$/))
+
+ameblo.jp##div[class^="_"]:has(> div > h2:has-text(このブログのフォロワーが読んでいる記事))
+
+ameblo.jp##div[class^="_"]:has(> div > h2:has-text(/部門ランキング$/))
+
+ameblo.jp##div[class^="_"]:has(> div > h2:has-text(/のテーマ別記事$/))
+
+ameblo.jp##div[class^="_"]:has(> h2:has-text(ジャンル総合ランキング))
+
+ameblo.jp##aside[class^="_"]:has(> div > div > h2:has-text(ジャンル人気記事ランキング))
+
+ameblo.jp##aside[class^="_"]:has(> div > div > a > p:has-text(芸能人・有名人ブログ TOPへ))
+
+ameblo.jp##div[class^="_"]:has(> div > h2:has-text(トップブロガーランキング))
+
+ameblo.jp##div[class^="_"]:has(> div > h2:has-text(総合ランキング))
+
+ameblo.jp##div[class^="_"]:has(> div > h2:has-text(急上昇ランキング))
+
+ameblo.jp##div[class^="_"]:has(> div > h2:has-text(新登場ランキング))
+
+ameblo.jp##div[class^="_"]:has(> div > h2:has-text(Ameba殿堂入りブログ))
