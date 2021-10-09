@@ -21,8 +21,8 @@ annotations_module.js$script,domain=youtube.com
 ! YouTube 終了画面カード非表示
 youtube.com##.ytp-ce-element-show
 
-!
-! スマホ用アメブロを見やすくする
+! Android版Firefoxじゃないと効かない？
+! アメブロを見やすくする
 ameblo.jp##div[class^="_"]:has(> div > h2:has-text(/さんの人気記事$/))
 
 ameblo.jp##div[class^="_"]:has(> div > h2:has-text(このブログのフォロワーが読んでいる記事))
