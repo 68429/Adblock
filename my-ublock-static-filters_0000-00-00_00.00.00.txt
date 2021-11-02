@@ -1,25 +1,48 @@
-! Last updated: 2021.10.10
+! Last updated: 2021.11.02
 
-! Twitterを使ってみよう 非表示
+! Google
+!
+! 他の人はこちらも検索
+www.google.com,www.google.co.jp###rso .g div[id^="eob_"]
+
+! Chrome ウェブストア
+!
+! Chrome に切り替えませんか？
+chrome.google.com##div[aria-labelledby="promo-header"]
+
+! Twitter
+!
+! Twitterを使ってみよう
 twitter.com##div[data-testid=sidebarColumn] div > div > div > section[aria-label="アカウント作成"]
-
-! Twitter いまどうしてる？ 非表示
+!
+! いまどうしてる？
 twitter.com##div[aria-label="タイムライン: トレンド"]
-
-! Twitter おすすめツイート 非表示
+!
+! おすすめツイート
 twitter.com##aside[aria-label=おすすめユーザー]:upward(1)
 
-! YouTube 検索結果 他の人はこちらも視聴しています 非表示
+! YouTube
+!
+! 検索結果
+! 他の人はこちらも視聴しています
 youtube.com###title.ytd-shelf-renderer:has-text(/^他の人はこちらも視聴しています$/):upward(ytd-shelf-renderer)
-
-! YouTube 検索結果 あなたへのおすすめ 非表示
+!
+! あなたへのおすすめ
 youtube.com###title.ytd-shelf-renderer:has-text(/^あなたへのおすすめ$/):upward(ytd-shelf-renderer)
-
-! YouTube アノテーションボタン削除
+!
+! 映画を検索
+youtube.com##ytd-horizontal-card-list-renderer.ytd-item-section-renderer:has-text(の映画を検索)
+!
+! アノテーションボタン
 annotations_module.js$script,domain=youtube.com
-
-! YouTube 終了画面カード非表示
+!
+! 終了画面カード
 youtube.com##.ytp-ce-element-show
+
+! ニコニコ
+!
+! 検索結果に出てくるコメント
+www.nicovideo.jp##.itemComment
 
 ! Android版Firefoxじゃないと効かない？
 ! アメブロを見やすくする
