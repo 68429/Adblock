@@ -1,4 +1,4 @@
-! Last updated: 2021.11.02
+!Last updated: 2021.11.02
 
 ! Google
 !
@@ -26,11 +26,9 @@ twitter.com##aside[aria-label=おすすめユーザー]:upward(1)
 ! 検索結果
 ! 他の人はこちらも視聴しています
 youtube.com###title.ytd-shelf-renderer:has-text(/^他の人はこちらも視聴しています$/):upward(ytd-shelf-renderer)
-!
 ! あなたへのおすすめ
 youtube.com###title.ytd-shelf-renderer:has-text(/^あなたへのおすすめ$/):upward(ytd-shelf-renderer)
-!
-! 映画を検索
+! ～の映画を検索
 youtube.com##ytd-horizontal-card-list-renderer.ytd-item-section-renderer:has-text(の映画を検索)
 !
 ! アノテーションボタン
