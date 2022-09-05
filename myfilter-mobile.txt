@@ -7,14 +7,15 @@
 !
 ! Twitter
 !
+!「いま」起きていることを見つけよう
+mobile.twitter.com###layers div[dir="auto"] > span:has-text(Twitterアプリをおすすめ):upward(5)
+mobile.twitter.com###layers div[class="css-1dbjc4n r-l5o3uw r-97e31f"]
+!
 ! おすすめトピック
 twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] h2 > div[style^=-webkit] > span:has-text(おすすめトピック):upward(div[style^=transform])
 twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] div[data-testid=ScrollSnap-SwipeableList]:has(div[aria-label^=トピック「][aria-label$=をフォロー])
 twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] > div[class^=css]:only-child > div[class^=css]:only-child:empty
 !
-!「いま」起きていることを見つけよう
-mobile.twitter.com###layers div[dir="auto"] > span:has-text(Twitterアプリをおすすめ):upward(5)
-mobile.twitter.com###layers div[class="css-1dbjc4n r-l5o3uw r-97e31f"]
 !
 ! ○○さんのツイートをさらに表示 Twitterなら、「いま」起きていることをいち早くチェックできます。
 twitter.com##div#layers div[data-testid="sheetDialog"]:upward(div[role="group"][tabindex="0"])
