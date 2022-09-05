@@ -1,31 +1,37 @@
-!Last updated: 2021.11.02
-
+!Last updated: 2022.09.06
+!
+! 以下、PC版Firefoxで動作確認
 ! Google
 !
 ! 他の人はこちらも検索
 www.google.com,www.google.co.jp###rso .g div[id^="eob_"]
-
+!
 ! Chrome ウェブストア
 !
 ! Chrome に切り替えませんか？
 chrome.google.com##div[aria-labelledby="promo-header"]
-
+!
 ! Twitter
 !
 ! Twitterを使ってみよう
-twitter.com##div[data-testid=sidebarColumn] div > div > div > section[aria-label="アカウント作成"]
+twitter.com##section[aria-label="アカウント作成"]:style(display:none !important;)
+!twitter.com##div[data-testid=sidebarColumn] div > div > div > section[aria-label="アカウント作成"]
 !
 ! いまどうしてる？
-twitter.com##div[aria-label="タイムライン: トレンド"]
+twitter.com##div[aria-label="タイムライン: トレンド"]:style(display:none !important;)
+!twitter.com##div[aria-label="タイムライン: トレンド"]
 !
 ! おすすめツイート
-twitter.com##aside[aria-label=おすすめユーザー]:upward(1)
+twitter.com##.r-1bro5k0:style(display:none !important;)
+!twitter.com##aside[aria-label=おすすめユーザー]:upward(1)
 
 ! YouTube
 !
 ! 検索結果
 ! 他の人はこちらも視聴しています
 youtube.com###title.ytd-shelf-renderer:has-text(/^他の人はこちらも視聴しています$/):upward(ytd-shelf-renderer)
+! 関連する検索から
+youtube.com###title.ytd-shelf-renderer:has-text(関連する検索から):upward(ytd-shelf-renderer)
 ! あなたへのおすすめ
 youtube.com###title.ytd-shelf-renderer:has-text(/^あなたへのおすすめ$/):upward(ytd-shelf-renderer)
 ! ～の映画を検索
@@ -42,6 +48,29 @@ youtube.com##.ytp-ce-element-show
 ! 検索結果に出てくるコメント
 www.nicovideo.jp##.itemComment
 
+! TikTok
+! コメント欄
+www.tiktok.com##div[class$="-DivCommentListContainer"]
+!
+!
+!
+! 以下、スマホ用
+!
+! おすすめトピック
+twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] h2 > div[style^=-webkit] > span:has-text(おすすめトピック):upward(div[style^=transform])
+twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] div[data-testid=ScrollSnap-SwipeableList]:has(div[aria-label^=トピック「][aria-label$=をフォロー])
+twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] > div[class^=css]:only-child > div[class^=css]:only-child:empty
+!
+!「いま」起きていることを見つけよう
+twitter.com###layers > div[class] > div[class] > div[class] > div[class]:has(> div[class] > div[class] > div[class] > div[class] > div[class] > div[class] > a[href="/login"])
+!
+! ○○さんのツイートをさらに表示 Twitterなら、「いま」起きていることをいち早くチェックできます。
+twitter.com##div#layers div[data-testid="sheetDialog"]:upward(div[role="group"][tabindex="0"])
+twitter.com##html:style(overflow: auto !important;)
+!
+!
+!
+! 以下、古いやつ(動作確認してない)
 ! Android版Firefoxじゃないと効かない？
 ! アメブロを見やすくする
 ameblo.jp##div[class^="_"]:has(> div > h2:has-text(/さんの人気記事$/))
