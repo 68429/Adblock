@@ -56,13 +56,6 @@ www.tiktok.com##div[class$="-DivCommentListContainer"]
 !
 ! 以下、スマホ用
 !
-! おすすめトピック
-twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] h2 > div[style^=-webkit] > span:has-text(おすすめトピック):upward(div[style^=transform])
-twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] div[data-testid=ScrollSnap-SwipeableList]:has(div[aria-label^=トピック「][aria-label$=をフォロー])
-twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] > div[class^=css]:only-child > div[class^=css]:only-child:empty
-!
-!「いま」起きていることを見つけよう
-twitter.com###layers > div[class] > div[class] > div[class] > div[class]:has(> div[class] > div[class] > div[class] > div[class] > div[class] > div[class] > a[href="/login"])
 !
 ! ○○さんのツイートをさらに表示 Twitterなら、「いま」起きていることをいち早くチェックできます。
 twitter.com##div#layers div[data-testid="sheetDialog"]:upward(div[role="group"][tabindex="0"])
