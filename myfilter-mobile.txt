@@ -1,6 +1,6 @@
 ! Last updated: 2022.09.06
 !
-! 動作確認 : Android版Brave
+! まだしてない動作確認 : Android版Brave
 ! アドレスバーに chrome://adblock と入力し確定ボタンをタップ
 ! 出てきたページに↓を貼り付ける
 !
@@ -13,7 +13,8 @@ twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイー�
 twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] > div[class^=css]:only-child > div[class^=css]:only-child:empty
 !
 !「いま」起きていることを見つけよう
-twitter.com###layers > div[class] > div[class] > div[class] > div[class]:has(> div[class] > div[class] > div[class] > div[class] > div[class] > div[class] > a[href="/login"])
+mobile.twitter.com###layers div[dir="auto"] > span:has-text(Twitterアプリをおすすめ):upward(5)
+mobile.twitter.com###layers div[class="css-1dbjc4n r-l5o3uw r-97e31f"]
 !
 ! ○○さんのツイートをさらに表示 Twitterなら、「いま」起きていることをいち早くチェックできます。
 twitter.com##div#layers div[data-testid="sheetDialog"]:upward(div[role="group"][tabindex="0"])
