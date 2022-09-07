@@ -1,6 +1,8 @@
-! Last updated: 2022.09.06
+! Last updated: 2022.09.08
 !
-! まだしてない動作確認 : Android版Brave
+! 動作確認 : Android版Firefox
+!
+! 動作未確認 : Android版Brave
 ! アドレスバーに chrome://adblock と入力し確定ボタンをタップ
 ! 出てきたページに↓を貼り付ける
 !
