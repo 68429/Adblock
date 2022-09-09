@@ -1,4 +1,4 @@
-! Last updated: 2022.09.08
+! Last updated: 2022.09.09
 !
 ! 動作確認 : Android版Firefox
 !
@@ -10,8 +10,8 @@
 ! Twitter
 !
 !「いま」起きていることを見つけよう
-mobile.twitter.com###layers div[dir="auto"] > span:has-text(Twitterアプリをおすすめ):upward(5)
-mobile.twitter.com###layers div[class="css-1dbjc4n r-l5o3uw r-97e31f"]
+twitter.com###layers div[dir="auto"] > span:has-text(Twitterアプリをおすすめ):upward(5)
+twitter.com###layers div[class="css-1dbjc4n r-l5o3uw r-97e31f"]
 !
 ! おすすめトピック
 twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] h2 > div[style^=-webkit] > span:has-text(おすすめトピック):upward(div[style^=transform])
@@ -19,6 +19,6 @@ twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイー�
 twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] > div[class^=css]:only-child > div[class^=css]:only-child:empty
 !
 !
-! ○○さんのツイートをさらに表示 Twitterなら、「いま」起きていることをいち早くチェックできます。
+! ○○さんのツイートをさらに表示 ポップアップ
 twitter.com##div#layers div[data-testid="sheetDialog"]:upward(div[role="group"][tabindex="0"])
 twitter.com##html:style(overflow: auto !important;)
