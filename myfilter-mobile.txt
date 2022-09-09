@@ -9,9 +9,8 @@
 !
 ! Twitter
 !
-!「いま」起きていることを見つけよう
+! 下部青いバー Twitterアプリをおすすめします
 twitter.com###layers div[dir="auto"] > span:has-text(Twitterアプリをおすすめ):upward(5)
-twitter.com###layers div[class="css-1dbjc4n r-l5o3uw r-97e31f"]
 !
 ! おすすめトピック
 twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] h2 > div[style^=-webkit] > span:has-text(おすすめトピック):upward(div[style^=transform])
