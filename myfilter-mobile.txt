@@ -1,4 +1,4 @@
-! Last updated: 2022.09.09
+! Last updated: 2022.09.10
 !
 ! 動作確認 : Android版Firefox
 !
@@ -10,7 +10,7 @@
 ! Twitter
 !
 ! 下部青いバー Twitterアプリをおすすめします
-twitter.com###layers div[dir="auto"] > span:has-text(Twitterアプリをおすすめ):upward(5)
+mobile.twitter.com###layers div[dir="auto"] > span:has-text(Twitterアプリをおすすめ):upward(5)
 !
 ! おすすめトピック
 twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイート] > div > div[style^=transform] h2 > div[style^=-webkit] > span:has-text(おすすめトピック):upward(div[style^=transform])
@@ -19,5 +19,4 @@ twitter.com##div[aria-label^=タイムライン][aria-label$=さんのツイー�
 !
 !
 ! ○○さんのツイートをさらに表示 ポップアップ
-twitter.com##div#layers div[data-testid="sheetDialog"]:upward(div[role="group"][tabindex="0"])
-twitter.com##html:style(overflow: auto !important;)
+mobile,twitter.com##div[data-testid="sheetDialog"] > *:not(div[data-testid="IntentLoginSheet_Login_Sheet"]) div[role="button"][data-testid="app-bar-close"]:upward(div[role="group"])
