@@ -1,0 +1,94 @@
+! Title: My Bullshit Filter List
+! Last modified: September 20, 2022
+! Expires: 4 days
+! Homepage:
+! Version:
+
+
+! Google
+!
+! パラメータ除去
+||google.com$removeparam=client
+||google.com$removeparam=ved
+
+
+
+! Twitter
+!
+! パラメータ除去
+||twitter.com$removeparam=ref_src
+
+
+
+! YouTube
+!
+! 終了画面
+youtube.com##.ytp-ce-element
+!
+! 埋め込み重い対策
+||www.youtube.com/embed/*$subdocument,domain=www.ptt.cc
+
+
+
+! Yahoo!ニュース
+!
+! 左下のコメントポップアップ
+news.yahoo.co.jp,headlines.yahoo.co.jp##div:has(> a[class][href$="/comments"])
+!
+! 個記事サイドバー
+news.yahoo.co.jp###yjnSub
+! 中央寄せにする
+news.yahoo.co.jp###contents:style(padding: 0 9.5em !important;)
+
+
+! マイナビニュース
+!
+! フォント変更
+news.mynavi.jp##*:style(font-family:Noto Sans JP !important;)
+
+
+
+! Mozilla 公式サイト
+!
+! Win10環境だと強制メイリオになるのを変更
+www.mozilla.org##*:style(font-family:Noto Sans JP !important;)
+
+
+
+! ニコニコ
+!
+! 検索結果に出てくるコメント
+www.nicovideo.jp##.itemComment
+
+
+! TikTok
+!
+! ユーザーページ
+!
+! サイドバー
+www.tiktok.com##div[class*="-DivSideNavContainer"]
+!
+! 動画URL
+!
+! おすすめ動画, 関連動画
+www.tiktok.com##div[class*="-DivVideoList"]:has(p[class*="-PVideoListTitle"]:has-text(/おすすめ動画|関連動画/))
+!
+! キーボードショートカットが新登場！
+www.tiktok.com##div[class*="-DivKeyboardShortcutContainer"]
+!
+! PC版TikTokをゲット, TikTokアプリをゲット
+www.tiktok.com##div[class*="-DivPromotionContainer"]
+!
+! コメント欄
+!
+! アカウントから動画URLに移動した時
+www.tiktok.com##div[class*="-DivCommentListContainer"]
+!
+! それ以外
+www.tiktok.com##p[class*="-PCommentTitle"]:upward(div[class*="-DivCommentContainer"])
+
+
+! Chrome ウェブストア
+!
+! Chrome に切り替えませんか？
+chrome.google.com##div[aria-labelledby="promo-header"]
