@@ -1,3 +1,4 @@
+![uBlock Origin]
 ! Title: My Bullshit Filter List
 ! Last modified: September 23, 2022
 ! Expires: 4 days
