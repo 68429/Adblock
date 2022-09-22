@@ -1,2 +1,2 @@
 # 自分用
-[購読する](https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/68429/uBlockOrigin/main/my-ublock-static-filters.txt&title=My%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%83%BC) ([中身を見る](https://raw.githubusercontent.com/68429/uBlockOrigin/main/my-ublock-static-filters.txt))
+[購読する](https://subscribe.adblockplus.org?location=https://raw.githubusercontent.com/68429/uBlockOrigin/main/my-ublock-static-filters.txt&title=My%20Bullshit%20Filter%20List) ([中身を見る](https://raw.githubusercontent.com/68429/uBlockOrigin/main/my-ublock-static-filters.txt))
