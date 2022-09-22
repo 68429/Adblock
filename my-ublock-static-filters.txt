@@ -1,9 +1,9 @@
 ! Title: My Bullshit Filter List
-! Last modified: September 20, 2022
+! Last modified: September 23, 2022
 ! Expires: 4 days
 ! Homepage:
 ! Version:
-
+!
 
 ! Google
 !
@@ -12,12 +12,10 @@
 ||google.com$removeparam=ved
 
 
-
 ! Twitter
 !
 ! パラメータ除去
 ||twitter.com$removeparam=ref_src
-
 
 
 ! YouTube
@@ -27,7 +25,6 @@ youtube.com##.ytp-ce-element
 !
 ! 埋め込み重い対策
 ||www.youtube.com/embed/*$subdocument,domain=www.ptt.cc
-
 
 
 ! Yahoo!ニュース
@@ -41,11 +38,25 @@ news.yahoo.co.jp###yjnSub
 news.yahoo.co.jp###contents:style(padding: 0 9.5em !important;)
 
 
+! ABEMA
+!
+! お使いのブラウザは推奨環境外のため、正しく映像が再生されない可能性があります
+abema.tv##.com-m-NotificationManager
+!
+! ようこそ 新しいABEMAへ
+abema.tv##.com-onboarding-OnboardingModalContainerView--enter-done
+
+
 ! マイナビニュース
 !
 ! フォント変更
 news.mynavi.jp##*:style(font-family:Noto Sans JP !important;)
 
+
+! ロケットニュース
+!
+! 左上のシェアボタン
+rocketnews24.com###share-1687478
 
 
 ! Mozilla 公式サイト
@@ -53,6 +64,14 @@ news.mynavi.jp##*:style(font-family:Noto Sans JP !important;)
 ! Win10環境だと強制メイリオになるのを変更
 www.mozilla.org##*:style(font-family:Noto Sans JP !important;)
 
+
+! Togetter
+!
+! サイドバー
+togetter.com##aside.right
+!
+! 中央寄せにする
+togetter.com##main.contents.clearfix:style(margin:0 20em!important;)
 
 
 ! ニコニコ
