@@ -1,10 +1,35 @@
 ![uBlock Origin]
 ! Title: My Bullshit Filter List
-! Last modified: September 23, 2022
+! Last modified: Sun, 02 Oct 2022
 ! Expires: 4 days
 ! Homepage:
 ! Version:
 !
+
+! ABEMA
+!
+! お使いのブラウザは推奨環境外のため、正しく映像が再生されない可能性があります
+abema.tv##.com-m-NotificationManager
+!
+! ようこそ 新しいABEMAへ
+abema.tv##.com-onboarding-OnboardingModalContainerView--enter-done
+
+
+! Amazon.co.jp
+!
+! パラメータ除去
+||www.amazon.co.jp$removeparam=crid
+||www.amazon.co.jp$removeparam=keywords
+||www.amazon.co.jp$removeparam=qu
+||www.amazon.co.jp$removeparam=sprefix
+||www.amazon.co.jp$removeparam=/^srs?=/
+
+
+! Chrome ウェブストア
+!
+! Chrome に切り替えませんか？
+chrome.google.com##div[aria-labelledby="promo-header"]
+
 
 ! Google
 !
@@ -13,19 +38,62 @@
 ||google.com$removeparam=ved
 
 
+! Mozilla公式
+!
+! Win10環境だと強制メイリオになるのを変更
+www.mozilla.org##*:style(font-family:Noto Sans JP !important;)
+
+
+! TikTok
+!
+! ユーザーページ
+!
+! サイドバー
+www.tiktok.com##div[class*="-DivSideNavContainer"]
+!
+! 動画URL
+!
+! おすすめ動画, 関連動画
+www.tiktok.com##div[class*="-DivVideoList"]:has(p[class*="-PVideoListTitle"]:has-text(/おすすめ動画|関連動画/))
+!
+! キーボードショートカットが新登場！
+www.tiktok.com##div[class*="-DivKeyboardShortcutContainer"]
+!
+! PC版TikTokをゲット, TikTokアプリをゲット
+www.tiktok.com##div[class*="-DivPromotionContainer"]
+!
+! コメント欄
+!
+! アカウントから動画URLに移動した時
+www.tiktok.com##div[class*="-DivCommentListContainer"]
+!
+! それ以外
+www.tiktok.com##p[class*="-PCommentTitle"]:upward(div[class*="-DivCommentContainer"])
+
+
+! Togetter
+!
+! サイドバー
+togetter.com##aside.right
+!
+! 中央寄せにする
+togetter.com##main.contents.clearfix:style(margin:0 20em!important;)
+
+
 ! Twitter
 !
 ! パラメータ除去
 ||twitter.com$removeparam=ref_src
+!
+! "返信をさらに表示"の下、「いま」起きていることを見つけよう
+twitter.com##div[data-testid=primaryColumn] div:has(> div > div > a[href="/login"])
+!twitter.com##div[data-testid="cellInnerDiv"][style="transform: translateY(12531.3px); position: absolute; width: 100%; transition: opacity 0.3s ease-out 0s;"]:has-text(「いま」起きていることを見つけよう)
 
 
-! YouTube
+! Writening
 !
-! 終了画面
-youtube.com##.ytp-ce-element
-!
-! 埋め込み重い対策
-||www.youtube.com/embed/*$subdocument,domain=www.ptt.cc
+! 右上の吹き出し
+writening.net##.tate-ad
 
 
 ! Yahoo!ニュース
@@ -39,11 +107,43 @@ news.yahoo.co.jp###yjnSub
 news.yahoo.co.jp###contents:style(padding: 0 9.5em !important;)
 
 
-! ABEMA
+! YouTube
 !
-! お使いのブラウザは推奨環境外のため、正しく映像が再生されない可能性があります
-abema.tv##.com-m-NotificationManager
+! 終了画面
+youtube.com##.ytp-ce-element
 !
+! 埋め込み重い対策
+||www.youtube.com/embed/*$subdocument,domain=www.example.com
+
+
+! アットウィキ
+!
+! https://w.atwiki.jp/common/dist/css/atwiki_headbar.cssのせいでフォント変えられない対策
+w.atwiki.jp##*:style(font-family:Noto Sans JP !important;)
+
+
+! すまほん
+!
+! すまほん!!を購読しませんか？
+smhn.info###share
+
+
+! ニコニコ
+!
+! 検索結果に出てくるコメント
+www.nicovideo.jp##.itemComment
+
+
+! マイナビニュース
+!
+! フォント変更
+news.mynavi.jp##*:style(font-family:Noto Sans JP !important;)
+
+
+! ロケットニュース
+!
+! 左上のシェアボタン
+rocketnews24.com###share-1687478
 ! ようこそ 新しいABEMAへ
 abema.tv##.com-onboarding-OnboardingModalContainerView--enter-done
 
