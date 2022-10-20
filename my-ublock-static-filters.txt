@@ -1,10 +1,14 @@
 ![uBlock Origin]
 ! Title: My Bullshit Filter List
-! Last modified: Sun, 09 Oct 2022
+! Last modified: Fri, 21 Oct 2022
 ! Expires: 4 days
 ! Homepage:
 ! Version:
 !
+
+! AdGuard Tracking Protectionが厳しすぎてバナー画像までブロックしちゃう対応策
+#@#img[width="88"][height="31"]
+
 
 
 ! ABEMA
@@ -21,11 +25,7 @@ abema.tv##.com-onboarding-OnboardingModalContainerView--enter-done
 !
 ! パラメータ除去 *1 *2 *3
 !
-||www.amazon.co.jp$removeparam=crid
-||www.amazon.co.jp$removeparam=keywords
 ||www.amazon.co.jp$removeparam=qu
-||www.amazon.co.jp$removeparam=sprefix
-||www.amazon.co.jp$removeparam=/^srs?=/
 
 
 
@@ -41,7 +41,8 @@ chrome.google.com##div[aria-labelledby="promo-header"]
 ! パラメータ除去 *1 *2 *3
 !
 ||www.google.*/webhp?$removeparam=sa
-||www.google.*$removeparam=ved
+||www.google.*/webhp?$removeparam=ved
+||www.google.*/search?$removeparam=ved
 ||www.google.*/search?$removeparam=iflsig
 ||www.google.*/search?client=$removeparam=client
 
@@ -100,6 +101,9 @@ togetter.com##main.contents.clearfix:style(margin:0 20em!important;)
 ! "返信をさらに表示"の下、「いま」起きていることを見つけよう
 twitter.com##div[data-testid=primaryColumn] div:has(> div > div > a[href="/login"])
 !twitter.com##div[data-testid="cellInnerDiv"][style="transform: translateY(12531.3px); position: absolute; width: 100%; transition: opacity 0.3s ease-out 0s;"]:has-text(「いま」起きていることを見つけよう)
+!
+! おすすめ系消した後Borderが残るので消す
+twitter.com##.r-rs99b7:style(border-width:0px!important;)
 
 
 
@@ -129,6 +133,14 @@ youtube.com##.ytp-ce-element
 !
 ! 埋め込み重い対策
 ||www.youtube.com/embed/*$subdocument,domain=www.example.com
+!
+! (Edge)ウインドウの横幅によってはYouTubeの検索フォームが狭くなりすぎる問題を回避
+!#if env_chromium
+www.youtube.com##ytd-searchbox.ytd-masthead:style(margin:0 0 0 0!important;)
+www.youtube.com###container.ytd-searchbox:style(margin-left:0px!important;)
+www.youtube.com###search-icon-legacy.ytd-searchbox:style(width:35px!important;)
+www.youtube.com###end.ytd-masthead:style(min-width:0px!important;)
+!#endif
 
 
 
@@ -163,7 +175,7 @@ news.mynavi.jp##*:style(font-family:Noto Sans JP !important;)
 ! ロケットニュース
 !
 ! 左上のシェアボタン
-rocketnews24.com###share-1687478
+rocketnews24.com##.share-btns
 
 
 
